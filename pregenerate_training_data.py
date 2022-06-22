@@ -390,7 +390,6 @@ def main():
                     docs.add_document(doc)  # If the last doc didn't end on a newline, make sure it still gets added
 
         input_files=glob.glob(str(args.train_corpus) + '/*.txt')
-        input_files=input_files[0:4]
         manager = multiprocessing.Manager()
         shared_list = manager.list()
         jobs=[]

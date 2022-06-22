@@ -2,7 +2,7 @@
 # rootPath=$(dirname $(readlink -f $0))
 # echo $rootPath
 while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt
-pythonExe=/root/anaconda3/envs/pregenerate/bin/python3
+pythonExe=/root/anaconda3/bin/python3
 hdfs dfs -get hdfs://haruna/home/byte_arnold_hl_mlnlc/user/zhangying.1998/bert-large-uncased
 hdfs dfs -get hdfs://haruna/home/byte_arnold_hl_mlnlc/user/zhangying.1998/sharded_training_shards_256_test_shards_256_fraction_0.0/books_wiki_en_corpus
 $pythonExe -u pregenerate_training_data.py \
