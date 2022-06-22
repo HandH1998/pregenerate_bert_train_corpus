@@ -8,6 +8,7 @@ python3 -u pregenerate_training_data.py \
         --train_corpus books_wiki_en_corpus/ \
         --output_dir  pretraining_bert_data/ \
         --bert_model bert-large-uncased/ \
+        --reduce_memory \
         --do_lower_case \
         --num_workers 16 \
         --epochs_to_generate 3 \
